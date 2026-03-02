@@ -1,0 +1,37 @@
+// Styling for the team section
+.team-member {
+  margin-bottom: 50px;
+  text-align: center;
+  img {
+    width: 225px;
+    height: 225px;
+    border: 7px solid fade-out($black, 0.9);
+    object-fit: cover;    
+    object-fit: contain;      // cover
+    object-position: center;
+    background-color: white;
+  }
+  h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+
+/* 이메일 위로 당기기 */
+#team .team-member p.text-muted.mb-2 {
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.member-role-leader {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  font-weight: 400; 
+  color: #6b6b6b; 
+  line-height: 1.3;
+}

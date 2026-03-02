@@ -1,0 +1,185 @@
+<!-- Portfolio Modals -->
+{% for project in site.publications reversed %}
+{% if site.locale and site.locale != "" and site.locale != nil %}
+<div
+  class="portfolio-modal modal fade"
+  id="p{{ forloop.index }}"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="modal-body">
+
+              <!-- Title (center) -->
+              <h2 class="text-uppercase text-center">{{ project.title }}</h2>
+
+              <!-- Subtitle (center) -->
+              {% if project.subtitle %}
+              <p class="item-intro text-muted text-center">{{ project.subtitle }}</p>
+              {% endif %}
+
+              <!-- Meta info (left) -->
+              <div class="text-center">
+
+                {% if project.authors %}
+                <p class="paper-authors">{{ project.authors | markdownify }}</p>
+                {% endif %}
+
+                {% if project.paper_url %}
+                <p>
+                  <a class="btn btn-primary btn-sm" href="{{ project.paper_url }}" target="_blank" rel="noopener">
+                    View Paper
+                  </a>
+                </p>
+                {% endif %}
+
+                <div class="paper-meta text-center">
+                  {% if project.journal %}
+                  <p><span class="paper-label">Journal<br></span> {{ project.journal }}</p>
+                  {% endif %}
+                  
+                  {% if project.conference %}
+                  <p><span class="paper-label">Conference<br></span> {{ project.conference }}</p>
+                  {% endif %}
+                </div>
+              </div>
+
+              <!-- Image (between link and abstract) -->
+              {% if project.image %}
+              <img
+                class="img-fluid d-block mx-auto"
+                src="{{ project.image }}"
+                alt="{{ project.alt }}"
+              />
+              {% endif %}
+
+              <!-- Abstract (left) -->
+              {% if project.abstract %}
+              <div class="text-left mt-4">
+                <div class="paper-abstract text-center">
+                  <h4 class="abstract-title">Abstract</h4>{{ project.abstract | markdownify }}
+                </div>
+              </div>
+              {% endif %}
+
+              <!-- Optional main content (if you still use project.content) -->
+              {% if project.content %}
+              <div class="text-left mt-4">
+                {{ project.content }}
+              </div>
+              {% endif %}
+
+              <button class="btn btn-primary mt-4" data-dismiss="modal" type="button">
+                <i class="fas fa-times"></i>
+                {{ site.data.sitetext[site.locale].portfolio.closebutton | default: "Close" }}
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% else %}
+<div
+  class="portfolio-modal modal fade"
+  id="p{{ forloop.index }}"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="modal-body">
+
+              <!-- Title (center) -->
+              <h2 class="text-uppercase text-center">{{ project.title }}</h2>
+
+              <!-- Subtitle (center) -->
+              {% if project.subtitle %}
+              <p class="item-intro text-muted text-center">{{ project.subtitle }}</p>
+              {% endif %}
+
+              <!-- Meta info (left) -->
+              <div class="text-left">
+
+                {% if project.authors %}
+                <p class="paper-authors">{{ project.authors | markdownify }}</p>
+                {% endif %}
+
+                {% if project.journal %}
+                <p><strong>Journal:</strong> {{ project.journal }}</p>
+                {% endif %}
+
+                {% if project.conference %}
+                <p><strong>Conference:</strong> {{ project.conference }}</p>
+                {% endif %}
+
+                {% if project.paper_url %}
+                <p>
+                  <a class="btn btn-primary btn-sm" href="{{ project.paper_url }}" target="_blank" rel="noopener">
+                    View Paper
+                  </a>
+                </p>
+                {% endif %}
+
+              </div>
+
+              <!-- Image (between link and abstract) -->
+              {% if project.image %}
+              <img
+                class="img-fluid d-block mx-auto"
+                src="{{ project.image }}"
+                alt="{{ project.alt }}"
+              />
+              {% endif %}
+
+              <!-- Abstract (left) -->
+              {% if project.abstract %}
+              <div class="text-left mt-4">
+                <h4>Abstract</h4>
+                <p class="paper-abstract">{{ project.abstract | markdownify }}</p>
+              </div>
+              {% endif %}
+
+              <!-- Optional main content (if you still use project.content) -->
+              {% if project.content %}
+              <div class="text-left mt-4">
+                {{ project.content }}
+              </div>
+              {% endif %}
+
+              <button class="btn btn-primary mt-4" data-dismiss="modal" type="button">
+                <i class="fas fa-times"></i>
+                {{ site.data.sitetext.portfolio.closebutton | default: "Close Project" }}
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+<!-- End Portfolio Modals -->

@@ -1,0 +1,49 @@
+// Styling for the services section
+.service-heading {
+  margin: 15px 0;
+  text-transform: none;
+}
+
+/* ===== Lab Introduction Section ===== */
+
+.lab-description,
+.lab-join {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.lab-description p,
+.lab-join p {
+  margin-bottom: 18px;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+#services .row {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#services .fa-stack {
+  margin-bottom: 8px;
+}
+
+#services h4 {
+  font-size: 1.3rem;  
+  font-weight: 600;
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+}
+
+#services .section-subheading {
+  font-size: 1.15rem;  
+  margin-top: 10px;
+}
+
+#services h2.join-heading {
+  font-size: 2.1rem;  
+  margin-bottom: 20px;
+}
