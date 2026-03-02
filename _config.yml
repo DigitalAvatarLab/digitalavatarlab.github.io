@@ -15,7 +15,7 @@
 
 #remote_theme: raviriley/agency-jekyll-theme
 
-url: "https://sunjinnyjung.github.io"
+url: ""
 #url    : "" # the base hostname & protocol for your site, e.g. http://example.com
 #baseurl: "/agency-jekyll-theme-starter" # the subpath of your site, e.g. /blog
 baseurl: ""
