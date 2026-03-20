@@ -11,4 +11,4 @@ This repository contains the source code for the Digital Avatar Lab website.
 
 ## Preview
 
-![screenshot](assets/images/screenshot.png)
+![screenshot](assets/img/screenshot.png)
