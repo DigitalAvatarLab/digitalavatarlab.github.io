@@ -18,6 +18,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author }}">
+
+  <!-- Open Graph (카톡/페북 썸네일) -->
+  <meta property="og:title" content="Digital Avatar Lab">
+  <meta property="og:image" content="https://digitalavatarlab.github.io/assets/img/screenshot.png">
+  <meta property="og:type" content="website">
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   <title>{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
