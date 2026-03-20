@@ -2,6 +2,12 @@
 header.masthead {
   text-align: center;
   color: white;
+  
+  min-height: 100vh;
+  height: 100vh;
+  padding-top: 0;
+  padding-bottom: 0;
+
   background-image: url("#{$header-image}");
   background-repeat: no-repeat;
   background-attachment: scroll;
