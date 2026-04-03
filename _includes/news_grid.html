@@ -12,7 +12,6 @@
     <div class="row">
       {% for project in site.news reversed%}
       <div class="col-md-4 col-sm-6 portfolio-item">
-        <!-- 모달 제거: data-toggle 제거 + href는 무효 처리 -->
         <a class="portfolio-link" href="javascript:void(0)">
           <img class="img-fluid" src="{{ project.caption.thumbnail }}" alt="">
         </a>

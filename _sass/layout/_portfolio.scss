@@ -124,14 +124,13 @@
 
   .modal-content {
     padding: 100px 0;
-    text-align: center; // 기본은 센터 유지 (제목/버튼 등)
+    text-align: center; 
 
     h2 {
-      font-size: 2rem;  // 제목 크기 줄임
+      font-size: 2rem;
       margin-bottom: 15px;
     }
 
-    // 기존 p 기본 여백 줄임
     p { margin-bottom: 10px; }
 
     p.item-intro {
@@ -268,12 +267,10 @@
 }
 
 .portfolio-modal .paper-label {
-  /* color: $primary !important; */
   font-size: 1.15rem;
   font-weight: 700;
 }
 
-/* 5) Journal/Conference 사이 여백 줄이기 */
 .portfolio-modal .paper-meta p {
   margin: 4px 0 !important;
 }
